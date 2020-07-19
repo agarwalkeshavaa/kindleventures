@@ -1469,7 +1469,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #336791;
 }
 .marg{
-  margin-left:120px;
+  margin-left:18%;
 }
 .spaces{
   margin-top:10%;
@@ -1482,24 +1482,17 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 }
 #hello{
-  font-size:18px;
+  font-size:16px;
+  
 }
 .portmarg{
-  margin-left:25%;
+  margin-left:21%;
 
 }
 
 .other-image{
   width:20px;
   height:20px;
-}
-imagia{
-  width:40%; 
-  margin:5%
-}
-imagib{
-  width:50%;
-  margin-bottom:5%
 }
 .proposition-list .image img {
   position: absolute;
@@ -1563,4 +1556,20 @@ width:300px;  }
 .proposition-list .list-heading {
   font-size:12px;
 }
+.marg{
+  margin-left:0%;
+}
+.portmarg{
+  margin-left:0px;
+}
+
+}
+.contact-us{
+  font-size:30px;
+  color:#336791;
+  margin-bottom:20px;
+}
+.mont-font{
+  font-family: 'Montserrat', sans-serif;
+  font-size:16px;
 }
