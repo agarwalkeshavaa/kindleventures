@@ -923,6 +923,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
     overflow: hidden;
   position: relative;
   width: 100%;
+  
 }
 
 @media (max-width: 991px) {
@@ -930,6 +931,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
     margin-bottom: 30px;
   }
 }
+
 
 #team .team-block img {
   width: 100%;
@@ -1556,11 +1558,24 @@ width:300px;  }
 .proposition-list .list-heading {
   font-size:12px;
 }
+#team .team-block {
+  margin-bottom: 0px;
+ width:50%;
+ box-shadow: 0 0 0px #fff;
+
+}
+#team .team-block .team-content {
+  box-shadow: 0 0 0px #fff;
+}
 .marg{
-  margin-left:0%;
+  margin-left:21%;
 }
 .portmarg{
   margin-left:0px;
+}
+.investors
+{
+  margin-left:20%;
 }
 
 }
