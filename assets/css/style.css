@@ -1489,6 +1489,11 @@ body.mobile-nav-active #mobile-nav-toggle i {
   padding-top:0px;
 
 }
+.block{
+  height:150px;
+  width:300px
+}
+
 #hello{
   font-size:16px;
   
@@ -1561,6 +1566,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
     display: inline-block;
     vertical-align: middle;
 }
+
+
 @media (max-width: 768px) {
   .bold-heading{
     font-size:40px;
@@ -1600,7 +1607,15 @@ width:300px;  }
 .photu{
  margin-left:10%; 
 }
-
+.rightshift{
+  padding-right:15%;
+}
+.abc{
+  text-align: center;
+}
+.block{
+  height:10px;
+}
 
 }
 .contact-us{
@@ -1615,7 +1630,6 @@ width:300px;  }
 .poppin{
   font-family: 'Poppins', sans-serif;
 }
-
 
 
 
