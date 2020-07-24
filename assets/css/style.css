@@ -670,7 +670,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
 .feature-block-btn{
   background: #fff none repeat scroll 0 0;
   box-shadow: 0 3px 3px rgba(119, 119, 119, 0.63);
-  padding: 30px 20px;
+  padding: 15px 10px;
+  width:300px;
   transition: all 0.5s ease-in-out 0s;
   background-color:#336791;border-radius:65px;
 }
@@ -1574,7 +1575,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   }
   .feature-block-btn{
     width:200px;
-  }
+}
 #overview-img {
 height:200px;
 width:300px;  }
@@ -1614,7 +1615,7 @@ width:300px;  }
   text-align: center;
 }
 .block{
-  height:10px;
+  height:100px;
 }
 
 }
