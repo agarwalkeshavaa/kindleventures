@@ -165,7 +165,7 @@ span {
 
 #header #logo h1 {
   color: #505050;
-  font-family: "Philosopher", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 26px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -232,7 +232,7 @@ span {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  font-family: "Philosopher", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #336791;
 }
 
@@ -247,7 +247,7 @@ span {
   color: #777;
   margin-bottom: 30px;
   font-size: 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
 
@@ -265,7 +265,7 @@ span {
 }
 
 #hero .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 13px;
@@ -386,7 +386,7 @@ span {
   text-decoration: none;
   display: inline-block;
   color: #555;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 20px;
   outline: none;
@@ -569,7 +569,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 .section-title h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 45px;
   font-weight: 100;
   letter-spacing: 2px;
@@ -583,7 +583,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 .separator {
   color: #626262;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: 300;
   margin-bottom: 30px;
@@ -719,7 +719,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 #about-us .about-content h2 {
   color: #252525;
-  font-family: "roboto";
+  font-family: 'Poppins', sans-serif;
   font-size: 39px;
   font-weight: 100;
   letter-spacing: 2px;
@@ -1003,7 +1003,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 
 #testimonials .top-top > h2 {
-  font-family: "Roboto" sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 45px;
   font-weight: 100;
   letter-spacing: 2px;
@@ -1429,7 +1429,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #fff;
   display: inline-block;
   float: none;
-  font-family: "Philosopher", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 500;
   height: 100%;
@@ -1467,7 +1467,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 .footer .copyrights p, .footer .copyrights .credits {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: normal;
   font-size: 14px;
   letter-spacing: 0;
@@ -1567,7 +1567,9 @@ body.mobile-nav-active #mobile-nav-toggle i {
     display: inline-block;
     vertical-align: middle;
 }
-
+.left-padding{
+  padding-left: 100px;
+}
 
 @media (max-width: 768px) {
   .bold-heading{
@@ -1575,6 +1577,9 @@ body.mobile-nav-active #mobile-nav-toggle i {
   }
   .feature-block-btn{
     width:200px;
+}
+.left-padding{
+  padding-left: 0px;
 }
 .mentor{
 padding-left: 24%;
@@ -1628,10 +1633,7 @@ width:300px;  }
   color:#336791;
   margin-bottom:20px;
 }
-.mont-font{
-  font-family: 'Montserrat', sans-serif;
-  font-size:16px;
-}
+
 .poppin{
   font-family: 'Poppins', sans-serif;
 }
