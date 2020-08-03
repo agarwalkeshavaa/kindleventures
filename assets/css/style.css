@@ -715,6 +715,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 #about-us .about-content {
   padding-top: 60px;
+  
 }
 
 #about-us .about-content h2 {
@@ -1581,10 +1582,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 .left-padding{
   padding-left: 0px;
 }
-.mentor{
-padding-left: 24%;
-box-sizing: unset;
-}
+
 #overview-img {
 height:200px;
 width:300px;  }
@@ -1600,16 +1598,23 @@ width:300px;  }
 #team .team-block .team-content {
   box-shadow: 0 0 0px #fff;
 }
-.marg{
+/* .marg{
   margin-left:21%;
-}
+} */
 .portmarg{
   margin-left:0px;
 }
 .investors
 {
-  margin-left:20%;
-}
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+ }
+ .content-center{
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+ }
 .kns{
   margin-left:7%;
 
@@ -1617,9 +1622,7 @@ width:300px;  }
 .photu{
  margin-left:10%; 
 }
-.rightshift{
-  padding-right:15%;
-}
+
 .abc{
   text-align: center;
 }
@@ -1638,6 +1641,71 @@ width:300px;  }
   font-family: 'Poppins', sans-serif;
 }
 
+.subscribe-btn :hover{
+background-color: #336791!important;
+color:white;
+-webkit-transform: scale(1.09);
+-ms-transform: scale(1.09);
+transform: scale(1.09);
+}
+.subscribe-btn :focus{
+  background-color: #336791!important;
+
+}
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin:0 5px;}
+  .social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  
+  .social-circle li i {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .social-circle li a:hover i,
+  .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  .social-circle i {
+    color: #595959;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  
+  .social-network a {
+    background-color: #F9F9F9;
+  }
 
 
 
