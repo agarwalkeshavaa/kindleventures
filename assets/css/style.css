@@ -132,6 +132,9 @@ span {
   .back-to-top {
     bottom: 15px;
   }
+  .prev-inv{
+    font-size:17px;
+  }
 }
 
 .back-to-top:focus {
