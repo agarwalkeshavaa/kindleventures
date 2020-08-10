@@ -40,6 +40,34 @@
   justify-content: center; 
   align-items: center;
  }
+
+
+#custCarousel .carousel-indicators>li {
+    width: 100px;
+    padding-left: 50px;
+}
+
+#custCarousel .carousel-indicators li img {
+    display: block;
+    opacity: 0.8;
+    
+}
+
+#custCarousel .carousel-indicators li.active img {
+    opacity: 1
+}
+
+#custCarousel .carousel-indicators li:hover img {
+    opacity: 0.75;
+}
+@media (max-width: 768px) {
+  .cohert-img{
+    width:300px;
+  }
+  .ment-img{
+    width:100%;
+  }
+}
 </style>
 <body>
 
@@ -140,6 +168,7 @@
         Kindle mentorship programme is excited to assist brilliant minds through its mentorship cohort. This program is uniquely designed for Indian Startups with deep insights to Indian and US Market. The Program is intended to build sustainable ecosystem to promote and create evolution of world class Tech Startups from India.  
  
         <br>
+        <br>
     
     We would like to bring our decades of experience in Investment management, financial services and technology industries in the United States & India put to use for laying the foundation of world class enterprises. Cohort is intended to create assimilation for startups in the segments wherein the kindle team has advances as top-tier. Agritech | Fintech | AI/ML | Social Impact - These tech segments are going to shape our future and thus requires focused attention, as against nurturing a conventional tech startup.  
 
@@ -150,6 +179,57 @@
     </div>
     <br>
   </div>
+  <div class="container-fluid mt-0" data-aos="fade-up">
+    <div class="row justify-content-center ">
+      <div class="col-md-6 col-lg-4 content-center justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+        <section id="get-started" class="pb-sm-3 text-center content-center">
+
+        <div class="feature-block">
+
+          <img src="assets/img/svg/academic.jpg" alt="img" class="img-fluid">
+          <h3>STARTUPS</h3>
+        </div>
+      </section>
+
+    </div>
+</div>
+   
+    <div class="row content-center"data-aos="fade-up">
+      <div class=" col-12 " >
+      
+        <img  src="assets/img/cohort.png" class="cohert-img" alt="cohert" >
+      </div>
+
+        
+        <div class="col-12" style="position: relative;top:-37px">
+         
+          <div id="custCarousel" class="carousel slide " data-ride="carousel" align="center"data-interval="5000">
+            <ol class="carousel-indicators list-inline text-center">
+              <li class="list-inline-item active">
+                              
+                <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
+                  <div class="feature-block">
+                 <img src="assets/img/m.png" class="img-fluid">
+                </div>
+               </a> 
+              </li>
+              <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="assets/img/capital.png" class="img-fluid"> </a> </li>
+              <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> <img src="assets/img/services.png" class="img-fluid"> </a> </li>
+          </ol>
+            <div class="carousel-inner mt-5 pt-5">
+                <div class="carousel-item active"> <img src="assets/img/m.png" alt="mentorship"class="ment-img" width="60%" height="60%"> </div>
+                <div class="carousel-item"> <img src="assets/img/capital.png" alt="capital" class="ment-img"width="50%" height="50%"> </div>
+                <div class="carousel-item"> <img src="assets/img/services.png" alt="services" class="ment-img"width="50%" height="50%" > </div>
+            </div> <!-- Left right -->
+            <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a> 
+            <!-- Thumbnails -->
+            
+        </div>
+        </div>
+        
+      </div>
+   
+    </div>
   <div class="container-fluid" >
 <div class="row pt-3 pb-5 pl-sm-5" style="background-color: #eff2f5;">
   <div class=" col-12 col-sm-6"data-aos="fade-left">
@@ -185,21 +265,28 @@
   </section>
 </div>
 <div class="row pt-5 pb-5">
+  
   <div class=" col-12 ml-sm-auto pr-sm-5 col-sm-8"data-aos="fade-right">
     <h1  class="bold-heading  poppin"><b>Who fits best for this? </b></h1>
     <hr style="width:5%;border:2px solid #336791">
 
   </div>
-  <div class="col-12 col-sm-8 ml-auto mt-5 "data-aos="fade-right">
+  
+  <div class="row">
+    <div class="col-12 col-sm-5 mt-4 mr-auto" data-aos="fade-left">
+<img src="assets/img/who.png" alt="" width="300px">
+    </div>
+  <div class="col-12 col-sm-7 ml-auto mt-5 pl-5 pl-sm-0 "data-aos="fade-right">
     <p class="font-weight-bold poppin"style="text-align:left">Early stage Founder who is spending sleepless nights in building a world class product.
       <br> If these are some of the challenges that is bothering you every day for instance –   Unable to identify the right cofounder <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px" aria-hidden="true"></i> 
       <br> Still struggling to get the PMF (product market fit) for your product !! 
       <br> You have a product and few customers but you don’t know how to scale <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px" aria-hidden="true"></i> <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px" aria-hidden="true"></i> 
       <br> You don’t know how to raise funds <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px" aria-hidden="true"></i> 
    <br> You are still clueless about forming a Board of Director and Board of Advisors who can spearhead your organization <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px" aria-hidden="true"></i> 
- <br>
+  <br>
       You might have just landed at the right place.   </p>
   </div>
+ </div>
 </div>
 <div class="row pt-5 pb-5" style="background-color: #eff2f5;">
   <div class=" col-12 col-sm-6 pl-sm-5"data-aos="fade-left">
@@ -213,8 +300,7 @@
 </div>
   </div>
   
-  <div id="proposition" class="mt-3" data-aos="fade-up"
-  >
+  <!-- <div id="proposition" class="mt-3" data-aos="fade-up">
     <div class="container">
       <div class="section-title pt-3 text-center">
 
@@ -243,10 +329,10 @@
         </div>
         <div class="col-4">
           <li>
-						<!-- <div class="list-heading">
+						<div class="list-heading">
 							<div class="image"><img src="assets/img/inv.png"height="33px" width="33px"></div>
 							<div class="txt">Investment Support</div>
-						</div> -->
+						</div> 
 						<div class="list-heading">
               <div class="image"><img src="assets/img/growth.png"height="33px" width="33px" ></div>
               <div class="txt">Opportunity Assessment</div>
@@ -343,7 +429,7 @@
         </div>
        
 					
-					<!-- <li>
+					 <li>
 						<div class="list-heading">
 							<div class="image"><img src="images/global-connects.png"></div>
 							<div class="txt">Global Connects</div>
@@ -352,28 +438,28 @@
 							<li>Explore opportunities to participate in special delegation to overseas markets</li>
 							<li>Participate in global delegate sessions organized by NASSCOM in India</li>
 						</ol>
-					</li> -->
+					</li> 
     </div>
 
   </div>
   
-  </div>
+  </div> -->
 
   </section>
 
   
     <br>
 
-    <div class="container mt-5" data-aos="fade-up">
+    <!-- <div class="container mt-5" data-aos="fade-up">
       <div class="section-title text-center">
 
         <h2><b>Our Support Services </b> </h2>
         <hr style="width:5%;border:2px solid #336791">
 
       </div>
-    </div>
+    </div> -->
 
-    <section id="get-started" class="padd-section pt-0 text-sm-center" >
+    <!-- <section id="get-started" class="padd-section pt-0 text-sm-center" >
 
       
         
@@ -472,7 +558,7 @@
      
        
       </div>
-        </section>
+        </section> -->
   <section id="get-started" class="  text-sm-center"-->
     <div class="container " >
       <div class="row text-center justify-content-center mb-5">
@@ -480,7 +566,6 @@
         <div class="col-6 col-lg-4 " data-aos="zoom-in" data-aos-delay="100">
           <div class="feature-block-btn" style="background-color:#336791;border-radius:65px;padding:15px 10px;">
 
-            <!--img src="assets/img/mentor.png" alt="img" class="img-fluid"-->
             
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSd54fEIRRDN_1eYJHJ7CbhCsDC8dmwghyey40w7q0YBXbqnnA/viewform?usp=pp_urlp" target="_blank" style="color:white;font-size:22px;"><b>Apply to Mentorship Programme</b></a>
           </div>
