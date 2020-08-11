@@ -2,32 +2,34 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<title>Kindle Ventures</title>
-<meta content="" name="descriptison">
-<meta content="" name="keywords">
+  <title>Kindle Ventures</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
 
-<!-- Favicons -->
-<link href="assets/img/favicon.png" rel="icon">
-<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-<!-- Vendor CSS Files -->
-<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<link href="assets/vendor/modal-video/css/modal-video.min.css" rel="stylesheet">
-<link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/modal-video/css/modal-video.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-<!-- Template Main CSS File -->
-<link href="assets/css/style.css?v=2" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css?v=2" rel="stylesheet">
 
-<!-- =======================================================
+  <!-- =======================================================
 * Template Name: eStartup - v2.1.0
 * Template URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
 * Author: BootstrapMade.com
@@ -35,56 +37,96 @@
 ======================================================== -->
 </head>
 <style>
-  .content-center{
-  display: flex; 
-  justify-content: center; 
-  align-items: center;
- }
+  .content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 
-#custCarousel .carousel-indicators>li {
+  #custCarousel .carousel-indicators>li {
     width: 100px;
-    padding-left: 50px;
-}
 
-#custCarousel .carousel-indicators li img {
+  }
+  #custCarousel .carousel-inner .carousel-item img{
+    width: 50%;
+    height:450px;
+  } 
+
+  #custCarousel .carousel-indicators li img {
     display: block;
     opacity: 0.8;
-    
-}
 
-#custCarousel .carousel-indicators li.active img {
+  }
+
+  #custCarousel .carousel-indicators li.active img {
     opacity: 1
+  }
+
+  #custCarousel .carousel-indicators li:hover img {
+    opacity: 0.75;
+  }
+  .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 90%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+  cursor: pointer;
 }
 
-#custCarousel .carousel-indicators li:hover img {
-    opacity: 0.75;
+.container:hover .overlay {
+  opacity: 1;
 }
-@media (max-width: 768px) {
-  .cohert-img{
-    width:300px;
-  }
-  .ment-img{
-    width:100%;
-  }
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
+
+  @media (max-width: 768px) {
+    .cohert-img {
+      width: 300px;
+    }
+    #custCarousel .carousel-inner .carousel-item img{
+    height:300px;
+    width: 300px;
+  }
+
+    .ment-img {
+      width: 100%;
+    }
+  }
 </style>
+
 <body>
 
-<!-- ======= Header ======= -->
-<header id="header" class="header">
-  <div class="container">
+  <!-- ======= Header ======= -->
+  <header id="header" class="header">
+    <div class="container">
 
-    <div id="logo" class="pull-left">
-            <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
-      <a href="index.html"><img src="assets/img/kindlelogo.png" alt="Kindle" title="Kindle" /></a>
-    </div>
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+        <a href="index.html"><img src="assets/img/kindlelogo.png" alt="Kindle" title="Kindle" /></a>
+      </div>
     </div>
 
     <nav id="nav-menu-container">
       <ul class="nav-menu">
-        <li ><a href="index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
 
         <li><a href="index.html#about-us">About Us</a></li>
 
@@ -112,195 +154,255 @@
             <li><a href="portfolio.html#previous-investment">Previous</a></li>
           </ul>
         </li>
-        <!--li class="menu-has-children"><a href="#">Thoughts</a>
-          <ul>
-            <li><a href="thoughts.html#fintech-thoughts">Fintech</a></li>
-            <li><a href="thoughts.html#agritech-thoughts">Agritech</a></li>
-            <li><a href="thoughts.html#aiml-thoughts">Ai/Ml</a></li>
-          </ul>
-        </li-->
+      
 
         <li class="menu-has-children menu-active"><a href="#apply">Apply</a>
           <ul>
             <li><a href="eir.html" target="_blank">EIR</a></li>
-              <li><a href="mentorship.html"  target="_blank">Mentorship</a></li>
-              <li><a href="funding.html"target="_blank">Funding</a></li>             </ul>
+            <li><a href="mentorship.html" target="_blank">Mentorship</a></li>
+            <li><a href="funding.html" target="_blank">Funding</a></li>
+          </ul>
         </li>
       </ul>
     </nav><!-- #nav-menu-container -->
-  </div>
-</header><!-- End Header -->
-
-<main id="main">
-
-  <!-- ======= Breadcrumbs ======= -->
-  <section class="breadcrumbs">
-    <div class="container">
-
-      <div class="d-flex justify-content-between align-items-center">
-                
-      </div>
-
     </div>
-  </section><!-- End Breadcrumbs -->
+  </header><!-- End Header -->
 
-  <section class="inner-page pt-4 text-center justify-content-center">
-    
-    <div class="container" data-aos="fade-up">
-      <div class="section-title text-center">
+  <main id="main">
 
-        <h1 style="font-size:49px" class="poppin"><b>Kindle Venture’s – Mentorship Programme</b></h1>
-        <hr>
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
 
-      </div>
-    </div>
-  
-  
-   
-  <div class="container-fluid mt-5" data-aos="fade-up">
-    <div class="section-title pt-3 text-center" data-aos="fade-up">
+        <div class="d-flex justify-content-between align-items-center">
 
-      <h2 class="poppin"><b>Overview</b></h2>
-      <hr style="width:5%;border:2px solid #336791">
-    </div>
-    <div class="row " style="text-align:left" data-aos="fade-up">
-      <div class="col-12 pl-sm-5 col-md-6 poppin mt-sm-3" >
-        Kindle mentorship programme is excited to assist brilliant minds through its mentorship cohort. This program is uniquely designed for Indian Startups with deep insights to Indian and US Market. The Program is intended to build sustainable ecosystem to promote and create evolution of world class Tech Startups from India.  
- 
-        <br>
-        <br>
-    
-    We would like to bring our decades of experience in Investment management, financial services and technology industries in the United States & India put to use for laying the foundation of world class enterprises. Cohort is intended to create assimilation for startups in the segments wherein the kindle team has advances as top-tier. Agritech | Fintech | AI/ML | Social Impact - These tech segments are going to shape our future and thus requires focused attention, as against nurturing a conventional tech startup.  
-
-      </div>
-      <div class="col-12 col-md-4 offset-1" data-aos="fade-up">
-        <img src="assets/img/overview.jpg" alt="" class="mt-md-5 img-responsive" id="overview-img">
-      </div>
-    </div>
-    <br>
-  </div>
-  <div class="container-fluid mt-0" data-aos="fade-up">
-    <div class="row justify-content-center ">
-      <div class="col-md-6 col-lg-4 content-center justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-        <section id="get-started" class="pb-sm-3 text-center content-center">
-
-        <div class="feature-block">
-
-          <img src="assets/img/svg/academic.jpg" alt="img" class="img-fluid">
-          <h3>STARTUPS</h3>
         </div>
-      </section>
 
-    </div>
-</div>
-   
-    <div class="row content-center"data-aos="fade-up">
-      <div class=" col-12 " >
-      
-        <img  src="assets/img/cohort.png" class="cohert-img" alt="cohert" >
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page pt-4 text-center justify-content-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+
+          <h1 style="font-size:49px" class="poppin"><b>Kindle Venture’s – Mentorship Programme</b></h1>
+          <hr>
+
+        </div>
       </div>
 
-        
-        <div class="col-12" style="position: relative;top:-37px">
-         
-          <div id="custCarousel" class="carousel slide " data-ride="carousel" align="center"data-interval="5000">
-            <ol class="carousel-indicators list-inline text-center">
-              <li class="list-inline-item active">
-                              
-                <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
-                  <div class="feature-block">
-                 <img src="assets/img/m.png" class="img-fluid">
+
+
+      <div class="container-fluid mt-5" data-aos="fade-up">
+        <div class="section-title pt-3 text-center" data-aos="fade-up">
+
+          <h2 class="poppin"><b>Overview</b></h2>
+          <hr style="width:5%;border:2px solid #336791">
+        </div>
+        <div class="row " style="text-align:left" data-aos="fade-up">
+          <div class="col-12 pl-sm-5 col-md-6 poppin mt-sm-3">
+            Kindle mentorship programme is excited to assist brilliant minds through its mentorship cohort. This program
+            is uniquely designed for Indian Startups with deep insights to Indian and US Market. The Program is intended
+            to build sustainable ecosystem to promote and create evolution of world class Tech Startups from India.
+
+            <br>
+            <br>
+
+            We would like to bring our decades of experience in Investment management, financial services and technology
+            industries in the United States & India put to use for laying the foundation of world class enterprises.
+            Cohort is intended to create assimilation for startups in the segments wherein the kindle team has advances
+            as top-tier. Agritech | Fintech | AI/ML | Social Impact - These tech segments are going to shape our future
+            and thus requires focused attention, as against nurturing a conventional tech startup.
+
+          </div>
+          <div class="col-12 col-md-4 offset-1" data-aos="fade-up">
+            <img src="assets/img/overview.jpg" alt="" class="mt-md-5 img-responsive" id="overview-img">
+          </div>
+        </div>
+        <br>
+      </div>
+      <div class="container-fluid mt-0" data-aos="fade-up">
+        <div class="row justify-content-center ">
+          <div class="col-md-6 col-lg-4 content-center justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+            <section id="get-started" class="pb-sm-3 text-center content-center">
+
+              <div class="feature-block">
+
+                <img src="assets/img/svg/academic.jpg" alt="img" class="img-fluid">
+                <h3>STARTUPS</h3>
+              </div>
+            </section>
+
+          </div>
+        </div>
+
+        <div class="row content-center" data-aos="fade-up">
+          <div class=" col-12 ">
+
+            <img src="assets/img/cohort.png" class="cohert-img" alt="cohert">
+          </div>
+
+
+          <div class="col-12">
+
+            <div id="custCarousel" class="carousel slide mb-5 "sstyle="Position:static" data-ride="carousel" align="center" data-interval="3000">
+              <section id="get-started" class="text-center">
+                <div class="container">
+                  <div class="row mt-3 text-center content-center">
+
+                    <div class="col-12 col-sm-6 ">
+                      <div class="row justify-content-center">
+                        <div class=" col-4 col-sm-3 content-center" data-aos="zoom-in" data-aos-delay="100">
+                          <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
+
+                            <div class="feature-block" style="height:100px;width:100px;margin-bottom:40px">
+                              <img src="assets/img/m.png" class="img-fluid">
+                              <div class="overlay">
+                                <div class="text">Mentorship</div>
+                              </div>
+                            </div>
+                          </a>
+
+                        </div>
+
+                        <div class=" col-4 col-sm-3 content-center" data-aos="zoom-in" data-aos-delay="100">
+                          <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel">
+
+                            <div class="feature-block" style="height:100px;width:100px;margin-bottom:40px">
+                              <img src="assets/img/capital.png" class="img-fluid">
+                              <div class="overlay">
+                                <div class="text">Capital</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+
+                        <div class="col-4 col-sm-3 content-center" data-aos="zoom-in" data-aos-delay="100">
+                          <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel">
+
+                            <div class="feature-block" style="height:100px;width:100px;margin-bottom:40px">
+                              <img src="assets/img/services.png" class="img-fluid">
+                              <div class="overlay">
+                                <div class="text">Suppprt Services</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
                 </div>
-               </a> 
-              </li>
-              <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="assets/img/capital.png" class="img-fluid"> </a> </li>
-              <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> <img src="assets/img/services.png" class="img-fluid"> </a> </li>
-          </ol>
-            <div class="carousel-inner mt-5 pt-5">
-                <div class="carousel-item active"> <img src="assets/img/m.png" alt="mentorship"class="ment-img" width="60%" height="60%"> </div>
-                <div class="carousel-item"> <img src="assets/img/capital.png" alt="capital" class="ment-img"width="50%" height="50%"> </div>
-                <div class="carousel-item"> <img src="assets/img/services.png" alt="services" class="ment-img"width="50%" height="50%" > </div>
-            </div> <!-- Left right -->
-            <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a> 
-            <!-- Thumbnails -->
-            
-        </div>
-        </div>
-        
-      </div>
-   
-    </div>
-  <div class="container-fluid" >
-<div class="row pt-3 pb-5 pl-sm-5" style="background-color: #eff2f5;">
-  <div class=" col-12 col-sm-6"data-aos="fade-left">
-    <h1 class="bold-heading poppin "><b>Why Mentorship?</b></h1>
-    <hr style="width:5%;border:2px solid #336791">
+              </section>
 
-  </div>
-  <br>
-  <div class="col-12 col-sm-8 mt-5"data-aos="fade-left" >
-    <p class="poppin text-dark font-weight-bold " style="text-align: left;">When you start your entrepreneurship journey there is too much to do in too less a time. During these initial days Founders do everything by themselves and often loose the track between IMPORTANT and URGENT task. We at Kindle handhold your entrepreneurial journey and makes you part of our high energy team who helps you in laying the foundation for a great enterprise. We not only advise but walk, run, fall and succeed together. </p>
-  </div>
-  <section id="get-started" >
-    <div class="container mt-5 " >
-      <div class="row left-padding ">
+              <div class="carousel-inner pt-5">
+                <div class="carousel-item active"> <img src="assets/img/m.png" alt="mentorship" class="ment-img"> </div>
+                <div class="carousel-item"> <img src="assets/img/capital.png" alt="capital" class="ment-img" > </div>
+                <div class="carousel-item"> <img src="assets/img/services.png" alt="services" class="ment-img"> </div>
+              </div> <!-- Left right -->
+              <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span
+                  class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel"
+                data-slide="next"> <span class="carousel-control-next-icon"></span> </a>
+              <!-- Thumbnails -->
 
-        <div class="col-12 col-md-6 col-lg-4 " data-aos="zoom-in" data-aos-delay="100">
-          <div  style="background-color:#336791;" class="feature-block">
-            <div class="row">
-            <div class="pl-0 pl-sm-5 col-9 pr-0 pt-2"><h3 class="poppin " style="font-size:20px;color:#fff;font-weight:bold;">Know our mentors</h3></div>
-            <div class="col-3 pl-0"> <a href="knowmentors.html"><i class="fa  fa-arrow-circle-right " aria-hidden="true"style="font-size:40px;color:#fff"></i></a>
             </div>
           </div>
-            <!--img src="assets/img/mentor.png" alt="img" class="img-fluid"-->
-            
-          </div>
+
         </div>
-        
-
-
 
       </div>
-    </div>
-  </section>
-</div>
-<div class="row pt-5 pb-5">
-  
-  <div class=" col-12 ml-sm-auto pr-sm-5 col-sm-8"data-aos="fade-right">
-    <h1  class="bold-heading  poppin"><b>Who fits best for this? </b></h1>
-    <hr style="width:5%;border:2px solid #336791">
+      <div class="container-fluid">
+        <div class="row pt-3 pb-5 pl-sm-5" style="background-color: #eff2f5;">
+          <div class=" col-12 col-sm-6" data-aos="fade-left">
+            <h1 class="bold-heading poppin "><b>Why Mentorship?</b></h1>
+            <hr style="width:5%;border:2px solid #336791">
 
-  </div>
-  
-  <div class="row">
-    <div class="col-12 col-sm-5 mt-4 mr-auto" data-aos="fade-left">
-<img src="assets/img/who.png" alt="" width="300px">
-    </div>
-  <div class="col-12 col-sm-7 ml-auto mt-5 pl-5 pl-sm-0 "data-aos="fade-right">
-    <p class="font-weight-bold poppin"style="text-align:left">Early stage Founder who is spending sleepless nights in building a world class product.
-      <br> If these are some of the challenges that is bothering you every day for instance –   Unable to identify the right cofounder <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px" aria-hidden="true"></i> 
-      <br> Still struggling to get the PMF (product market fit) for your product !! 
-      <br> You have a product and few customers but you don’t know how to scale <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px" aria-hidden="true"></i> <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px" aria-hidden="true"></i> 
-      <br> You don’t know how to raise funds <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px" aria-hidden="true"></i> 
-   <br> You are still clueless about forming a Board of Director and Board of Advisors who can spearhead your organization <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px" aria-hidden="true"></i> 
-  <br>
-      You might have just landed at the right place.   </p>
-  </div>
- </div>
-</div>
-<div class="row pt-5 pb-5" style="background-color: #eff2f5;">
-  <div class=" col-12 col-sm-6 pl-sm-5"data-aos="fade-left">
-    <h1 class="bold-heading poppin"><b>What we do ? </b></h1>
-    <hr style="width:5%;border:2px solid #336791">
+          </div>
+          <br>
+          <div class="col-12 col-sm-8 mt-5" data-aos="fade-left">
+            <p class="poppin text-dark font-weight-bold " style="text-align: left;">When you start your entrepreneurship
+              journey there is too much to do in too less a time. During these initial days Founders do everything by
+              themselves and often loose the track between IMPORTANT and URGENT task. We at Kindle handhold your
+              entrepreneurial journey and makes you part of our high energy team who helps you in laying the foundation
+              for a great enterprise. We not only advise but walk, run, fall and succeed together. </p>
+          </div>
+          <section id="get-started">
+            <div class="container mt-5 ">
+              <div class="row left-padding ">
 
-  </div>
-  <div class="col-12 col-sm-7 mt-5 pl-sm-5">
-    <p class="font-weight-bold poppin" style="text-align: left" data-aos="fade-left">We are not a StartUp school. We are here to do and make things happen along with passionate founders. We provide customize one on one support to each founder and chalk out a path to a successful enterprise. We will be deeply involved in the operation of the business and will help the founder to take the moonshot. And when you are ready we will be there to Invest in you.  </p>
-  </div>
-</div>
-  </div>
-  
-  <!-- <div id="proposition" class="mt-3" data-aos="fade-up">
+                <div class="col-12 col-md-6 col-lg-4 " data-aos="zoom-in" data-aos-delay="100">
+                  <div style="background-color:#336791;" class="feature-block">
+                    <div class="row">
+                      <div class="pl-0 pl-sm-5 col-9 pr-0 pt-2">
+                        <h3 class="poppin " style="font-size:20px;color:#fff;font-weight:bold;">Know our mentors</h3>
+                      </div>
+                      <div class="col-3 pl-0"> <a href="knowmentors.html"><i class="fa  fa-arrow-circle-right "
+                            aria-hidden="true" style="font-size:40px;color:#fff"></i></a>
+                      </div>
+                    </div>
+                    <!--img src="assets/img/mentor.png" alt="img" class="img-fluid"-->
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="row pt-5 pb-5">
+
+          <div class=" col-12 ml-sm-auto pr-sm-5 col-sm-8" data-aos="fade-right">
+            <h1 class="bold-heading  poppin"><b>Who fits best for this? </b></h1>
+            <hr style="width:5%;border:2px solid #336791">
+
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-5 mt-4 mr-auto" data-aos="fade-left">
+              <img src="assets/img/who.png" alt="" width="300px">
+            </div>
+            <div class="col-12 col-sm-7 ml-auto mt-5 pl-5 pl-sm-0 " data-aos="fade-right">
+              <p class="font-weight-bold poppin" style="text-align:left">Early stage Founder who is spending sleepless
+                nights in building a world class product.
+                <br> If these are some of the challenges that is bothering you every day for instance – Unable to
+                identify the right cofounder <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px"
+                  aria-hidden="true"></i>
+                <br> Still struggling to get the PMF (product market fit) for your product !!
+                <br> You have a product and few customers but you don’t know how to scale <i class="fa fa-exclamation"
+                  style="color:#628aaa;font-size:22px" aria-hidden="true"></i> <i class="fa fa-exclamation"
+                  style="color:#628aaa;font-size:22px" aria-hidden="true"></i>
+                <br> You don’t know how to raise funds <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px"
+                  aria-hidden="true"></i>
+                <br> You are still clueless about forming a Board of Director and Board of Advisors who can spearhead
+                your organization <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px"
+                  aria-hidden="true"></i>
+                <br>
+                You might have just landed at the right place. </p>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5 pb-5" style="background-color: #eff2f5;">
+          <div class=" col-12 col-sm-6 pl-sm-5" data-aos="fade-left">
+            <h1 class="bold-heading poppin"><b>What we do ? </b></h1>
+            <hr style="width:5%;border:2px solid #336791">
+
+          </div>
+          <div class="col-12 col-sm-7 mt-5 pl-sm-5">
+            <p class="font-weight-bold poppin" style="text-align: left" data-aos="fade-left">We are not a StartUp
+              school. We are here to do and make things happen along with passionate founders. We provide customize one
+              on one support to each founder and chalk out a path to a successful enterprise. We will be deeply involved
+              in the operation of the business and will help the founder to take the moonshot. And when you are ready we
+              will be there to Invest in you. </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div id="proposition" class="mt-3" data-aos="fade-up">
     <div class="container">
       <div class="section-title pt-3 text-center">
 
@@ -445,9 +547,9 @@
   
   </div> -->
 
-  </section>
+    </section>
 
-  
+
     <br>
 
     <!-- <div class="container mt-5" data-aos="fade-up">
@@ -559,41 +661,42 @@
        
       </div>
         </section> -->
-  <section id="get-started" class="  text-sm-center"-->
-    <div class="container " >
-      <div class="row text-center justify-content-center mb-5">
+    <section id="get-started" class="  text-sm-center" -->
+      <div class="container ">
+        <div class="row text-center justify-content-center mb-5">
 
-        <div class="col-6 col-lg-4 " data-aos="zoom-in" data-aos-delay="100">
-          <div class="feature-block-btn" style="background-color:#336791;border-radius:65px;padding:15px 10px;">
+          <div class="col-6 col-lg-4 " data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-block-btn" style="background-color:#336791;border-radius:65px;padding:15px 10px;">
 
-            
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd54fEIRRDN_1eYJHJ7CbhCsDC8dmwghyey40w7q0YBXbqnnA/viewform?usp=pp_urlp" target="_blank" style="color:white;font-size:22px;"><b>Apply to Mentorship Programme</b></a>
+
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd54fEIRRDN_1eYJHJ7CbhCsDC8dmwghyey40w7q0YBXbqnnA/viewform?usp=pp_urlp"
+                target="_blank" style="color:white;font-size:22px;"><b>Apply to Mentorship Programme</b></a>
+            </div>
           </div>
+
+
+
+
         </div>
-        
-
-
-
       </div>
+    </section>
     </div>
-  </section>
-      </div>
-    </div>
-  
-  </section>
     </div>
 
-  
+    </section>
+    </div>
 
-</main><!-- End #main -->
 
-      
-<!-- ======= Footer ======= -->
-<footer class="footer  ">
-  <div class="container ">
-    <div class="row justify-content-center ">
 
-      <!-- <div class="col-md-12 col-lg-4">
+  </main><!-- End #main -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer  ">
+    <div class="container ">
+      <div class="row justify-content-center ">
+
+        <!-- <div class="col-md-12 col-lg-4">
         <div class="footer-logo">
 
           <img src="assets/img/kindle-footer.png" style="width:200px;">
@@ -601,116 +704,119 @@
         </div>
       </div> -->
 
-      <div class="col-sm-6 col-md-3 col-lg-3 ">
-        <div class="list-menu ">
+        <div class="col-sm-6 col-md-3 col-lg-3 ">
+          <div class="list-menu ">
 
-          <h4>About Us</h4>
+            <h4>About Us</h4>
 
-          <ul class="list-unstyled text-align-left">
-            <li><a href="index.html#about-us">About us</a></li>
-            <li><a href="index.html#team">Team</a></li>
-            <li><a href="focusarea.html">Focus Area</a></li>
-            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            <ul class="list-unstyled text-align-left">
+              <li><a href="index.html#about-us">About us</a></li>
+              <li><a href="index.html#team">Team</a></li>
+              <li><a href="focusarea.html">Focus Area</a></li>
+              <li><a href="privacypolicy.html">Privacy Policy</a></li>
 
-          </ul>
-
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-3 col-lg-3 ">
-        <div class="list-menu">
-
-          <h4>Team</h4>
-
-          <ul class="list-unstyled">
-            <li><a href="index.html#investing-team">Investing Team</a></li>
-            <li><a href="index.html#advisary">Advisors</a></li>
-            <li><a href="index.html#operating-team">Operating Team</a></li>
-            <li><a href="index.html#eir-team">EIR's</a></li>
-            <li><a href="index.html#ecosystem">Ecosystem</a></li>
-          </ul>
-
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-3 col-lg-2 ">
-        <div class="list-menu">
-
-          <h4>Focus Area</h4>
-
-          <ul class="list-unstyled">
-            <li><a href="focusarea.html#fintech-focusarea">Fintech</a></li>
-            <li><a href="focusarea.html#agritech-focusarea">Agritech</a></li>
-            <li><a href="focusarea.html#mlai-focusarea">ML/AI</a></li>
             </ul>
 
+          </div>
         </div>
-      </div>
-      <div class="col-sm-6 mt-0 pt-0 col-md-3 col-lg-4 ">
-        <div class="row mt-0 pt-0 content-center text-center">
-          <div class="col-12 ">
-          <h4 class="pl-lg-5 mt-0 pt-0" style="color:#fff">SUBSCRIBE TO OUR <span style="color:red;font-size:17px">NEWSLETTER!</span></h4>
-          <p class="pl-lg-5 text-white">Stay updated on our latest programmes</p>
-          <div class="input-group mb-3 pl-lg-4">
 
-            <input type="text" class="form-control" placeholder="Enter email address" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <div class="input-group-append subscribe-btn">
-              <button class="btn btn-lg " type="button"style="border-radius:0px;padding:5px 20px;outline:none;border:none;font-weight:bold;font-size:16px;background-color:red;border-top-right-radius:3px;border-bottom-right-radius:3px">SUBSCRIBE</button>
+        <div class="col-sm-6 col-md-3 col-lg-3 ">
+          <div class="list-menu">
+
+            <h4>Team</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="index.html#investing-team">Investing Team</a></li>
+              <li><a href="index.html#advisary">Advisors</a></li>
+              <li><a href="index.html#operating-team">Operating Team</a></li>
+              <li><a href="index.html#eir-team">EIR's</a></li>
+              <li><a href="index.html#ecosystem">Ecosystem</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2 ">
+          <div class="list-menu">
+
+            <h4>Focus Area</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="focusarea.html#fintech-focusarea">Fintech</a></li>
+              <li><a href="focusarea.html#agritech-focusarea">Agritech</a></li>
+              <li><a href="focusarea.html#mlai-focusarea">ML/AI</a></li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-sm-6 mt-0 pt-0 col-md-3 col-lg-4 ">
+          <div class="row mt-0 pt-0 content-center text-center">
+            <div class="col-12 ">
+              <h4 class="pl-lg-5 mt-0 pt-0" style="color:#fff">SUBSCRIBE TO OUR <span
+                  style="color:red;font-size:17px">NEWSLETTER!</span></h4>
+              <p class="pl-lg-5 text-white">Stay updated on our latest programmes</p>
+              <div class="input-group mb-3 pl-lg-4">
+
+                <input type="text" class="form-control" placeholder="Enter email address"
+                  aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append subscribe-btn">
+                  <button class="btn btn-lg " type="button"
+                    style="border-radius:0px;padding:5px 20px;outline:none;border:none;font-weight:bold;font-size:16px;background-color:red;border-top-right-radius:3px;border-bottom-right-radius:3px">SUBSCRIBE</button>
+                </div>
+              </div>
+
             </div>
           </div>
-          
-        </div>
-      </div>
-    
 
-    </div>
-    <div class="row mt-3 ">
-      <h4 class=" pl-lg-5 pr-3 text-white">Follow Us</h4>
+
+        </div>
+        <div class="row mt-3 ">
+          <h4 class=" pl-lg-5 pr-3 text-white">Follow Us</h4>
           <ul class="social-network social-circle ">
-           <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-           <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-           <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-           <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
 
           </ul>
+        </div>
+
+      </div>
     </div>
 
-    </div>
-  </div>
-
-  <div class="copyrights">
-    <div class="container">
-      <p>&copy; Copyrights Kindle Ventures. All rights reserved.</p>
-      <div class="credits">
-        <!--
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights Kindle Ventures. All rights reserved.</p>
+        <div class="credits">
+          <!--
         All the links in the footer should remain intact.
         You can delete the links only if you purchased the pro version.
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
       >
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a-->
+        </div>
       </div>
     </div>
-  </div>
 
-</footer><!-- End  Footer -->
+  </footer><!-- End  Footer -->
 
 
-<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/modal-video/js/modal-video.min.js"></script>
-<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="assets/vendor/superfish/superfish.min.js"></script>
-<script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/modal-video/js/modal-video.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/superfish/superfish.min.js"></script>
+  <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
 
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 
