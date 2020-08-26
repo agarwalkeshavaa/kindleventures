@@ -43,92 +43,106 @@
     align-items: center;
   }
 
-
-  #custCarousel .carousel-indicators>li {
-    width: 100px;
-
-  }
-  #custCarousel .carousel-inner .carousel-item img{
-    width: 50%;
-    height:450px;
-  } 
-  .capital-img{
-    width:40% !important;
-  }
-  .service-img{
-    width:45% !important;
+  .wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
 
-  #custCarousel .carousel-indicators li img {
-    display: block;
-    opacity: 0.8;
-
+  .wrapper::-webkit-scrollbar {
+    display: none;
   }
 
-  #custCarousel .carousel-indicators li.active img {
-    opacity: 1
+  .wrapper .item {
+    flex: 0 0 auto;
   }
 
-  #custCarousel .carousel-indicators li:hover img {
-    opacity: 0.75;
+  .mentor-img {
+    height: 250px !important;
+    width: 250px !important;
   }
+
+  @media(max-width: 768px) {
+    .mentor-img {
+      height: 150px !important;
+      width: 150px !important;
+    }
+  }
+
+  .capital-img {
+    width: 40% !important;
+  }
+
+  .service-img {
+    width: 45% !important;
+  }
+
+
+
   .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 90%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-  cursor: pointer;
-}
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 90%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+    cursor: pointer;
+  }
 
-.container:hover .overlay {
-  opacity: 1;
-}
+  .container:hover .overlay {
+    opacity: 1;
+  }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 
+  .apply_img {
+    width: 350px;
+  }
 
   @media (max-width: 768px) {
-    .cohert-img {
+    .apply_img {
       width: 300px;
     }
-    #custCarousel .carousel-inner .carousel-item img{
-    height:300px;
-    width: 300px;
-  }
+
+    #custCarousel .carousel-inner .carousel-item img {
+      height: 300px;
+      width: 300px;
+    }
 
     .ment-img {
       width: 100%;
     }
-    .capital-img{
-    width:100% !important;
+
+    .capital-img {
+      width: 100% !important;
+    }
+
+    .service-img {
+      width: 100% !important;
+    }
+
+    .overlay {
+      width: 96%;
+    }
+
+    .overlay .text {
+      font-size: 15px;
+    }
   }
-  .service-img{
-    width:100% !important;
-  }
-  .overlay {
-    width:96%;
-  }
-  .overlay .text {
-    font-size: 15px;
-  }
-  }
-  
 </style>
 
 <body>
@@ -150,13 +164,15 @@
 
         <li><a href="index.html#about-us">About Us</a></li>
 
-        <li class="menu-has-children"><a href="index.html">Team</a>
+        <li class="menu-has-children"><a href="index.html#team" target="_blank">Team</a>
           <ul>
-            <li><a href="index.html#investing-team">Investing Team</a></li>
+            <li><a href="index.html#investing-team">Founder/Investing Team</a></li>
+            <li><a href="index.html#northamerican">NorthAmerican Team</a></li>
+
             <li><a href="index.html#advisary">Advisors</a></li>
             <li><a href="index.html#operating-team">Operating Team</a></li>
-            <li><a href="eir.html">EIR's</a></li>
-            <li><a href="knowmentors.html">Mentors</a></li>
+            <li><a href="index.html#eir-team">EIR's</a></li>
+            <li><a href="knowmentors.html"target="_blank"></a>>Mentors</a></li>
           </ul>
         </li>
 
@@ -164,17 +180,18 @@
           <ul>
             <li><a href="focusarea.html#fintech-focusarea">Fintech</a></li>
             <li><a href="focusarea.html#agritech-focus-area">Agritech</a></li>
-            <li><a href="focusarea.html#mlai-focusarea">ML/AI</a></li>
+            <li><a href="focusarea.html#entermlai-focusarea">Enterprise(ML/AI)</a></li>
+            <li><a href="focusarea.html#socialmlai-focusarea">Social Impact(ML/AI)</a></li>
           </ul>
         </li>
 
-        <li class="menu-has-children menu-active"><a href="portfolio.html">Portfolio</a>
+        <li class="menu-has-children"><a href="portfolio.html">Portfolio</a>
           <ul>
             <li><a href="portfolio.html#currentportfolio">Current</a></li>
             <li><a href="portfolio.html#previous-investment">Previous</a></li>
           </ul>
         </li>
-      
+
 
         <li class="menu-has-children menu-active"><a href="#apply">Apply</a>
           <ul>
@@ -236,190 +253,75 @@
             and thus requires focused attention, as against nurturing a conventional tech startup.
 
           </div>
-          <div class="col-12 col-md-4 offset-1" data-aos="fade-up">
-            <img src="assets/img/overview.jpg" alt="" class="mt-md-5 img-responsive" id="overview-img">
+          <div class="col-12 col-md-4 offset-1" style="margin-top:-30px!important" data-aos="fade-up">
+            <img src="assets/img/overview.png" height="350px" witsh="300px" alt="" class="mt-md-5 img-responsive"
+              id="overview-img">
           </div>
         </div>
         <br>
       </div>
-      <div class="container-fluid mt-0" data-aos="fade-up">
-        <div class="row justify-content-center ">
-          <div class="col-md-6 col-lg-4 content-center justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-            <section id="get-started" class="pb-sm-3 text-center content-center">
 
-              <div class="feature-block">
-
-                <img src="assets/img/svg/academic.jpg" alt="img" class="img-fluid">
-                <h3>STARTUPS</h3>
-              </div>
-            </section>
-
-          </div>
-        </div>
-
-        <div class="row content-center" data-aos="fade-up">
-          <div class=" col-12 ">
-
-            <img src="assets/img/cohort.png" class="cohert-img" alt="cohert">
-          </div>
-
-
-          <div class="col-12">
-
-            <div id="custCarousel" class="carousel slide mb-5 "sstyle="Position:static" data-ride="carousel" align="center" data-interval="3000">
-              <section id="get-started" class="text-center">
-                <div class="container">
-                  <div class="row mt-3 text-center content-center">
-
-                    <div class="col-12 col-sm-6 ">
-                      <div class="row justify-content-center">
-                        <div class=" col-4 col-sm-3 content-center" data-aos="zoom-in" data-aos-delay="100">
-                          <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
-
-                            <div class="feature-block" style="height:100px;width:100px;margin-bottom:40px">
-                              <img src="assets/img/m.png" class="img-fluid">
-                              <div class="overlay">
-                                <div class="text">Mentorship</div>
-                              </div>
-                            </div>
-                          </a>
-
-                        </div>
-
-                        <div class=" col-4 col-sm-3 content-center" data-aos="zoom-in" data-aos-delay="100">
-                          <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel">
-
-                            <div class="feature-block" style="height:100px;width:100px;margin-bottom:40px">
-                              <img src="assets/img/capital.png" class="img-fluid">
-                              <div class="overlay">
-                                <div class="text">Capital</div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-
-                        <div class="col-4 col-sm-3 content-center" data-aos="zoom-in" data-aos-delay="100">
-                          <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel">
-
-                            <div class="feature-block" style="height:100px;width:100px;margin-bottom:40px">
-                              <img src="assets/img/services.png" class="img-fluid">
-                              <div class="overlay">
-                                <div class="text">Suppprt Services</div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-
-              <div class="carousel-inner pt-5">
-                <div class="carousel-item active"> <img src="assets/img/m.png" alt="mentorship" class="ment-img"> </div>
-                <div class="carousel-item"> <img src="assets/img/capital.png" alt="capital" class="capital-img" > </div>
-                <div class="carousel-item"> <img src="assets/img/services.png" alt="services" class="service-img"> </div>
-              </div> <!-- Left right -->
-              <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span
-                  class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel"
-                data-slide="next"> <span class="carousel-control-next-icon"></span> </a>
-              <!-- Thumbnails -->
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
       <div class="container-fluid">
-        <div class="row pt-3 pb-5 pl-sm-5" style="background-color: #eff2f5;">
-          <div class=" col-12 col-sm-6" data-aos="fade-left">
-            <h1 class="bold-heading poppin "><b>Why Mentorship?</b></h1>
-            <hr style="width:5%;border:2px solid #336791">
+        <div class="section-title pt-3 text-center" data-aos="fade-up">
 
-          </div>
-          <br>
-          <div class="col-12 col-sm-8 mt-5" data-aos="fade-left">
-            <p class="poppin text-dark font-weight-bold " style="text-align: left;">When you start your entrepreneurship
-              journey there is too much to do in too less a time. During these initial days Founders do everything by
-              themselves and often loose the track between IMPORTANT and URGENT task. We at Kindle handhold your
-              entrepreneurial journey and makes you part of our high energy team who helps you in laying the foundation
-              for a great enterprise. We not only advise but walk, run, fall and succeed together. </p>
-          </div>
-          <section id="get-started">
-            <div class="container mt-5 ">
-              <div class="row left-padding ">
-
-                <div class="col-12 col-md-6 col-lg-4 " data-aos="zoom-in" data-aos-delay="100">
-                  <div style="background-color:#336791;" class="feature-block">
-                    <div class="row">
-                      <div class="pl-0 pl-sm-5 col-9 pr-0 pt-2">
-                        <h3 class="poppin " style="font-size:20px;color:#fff;font-weight:bold;">Know our mentors</h3>
-                      </div>
-                      <div class="col-3 pl-0"> <a href="knowmentors.html"><i class="fa  fa-arrow-circle-right "
-                            aria-hidden="true" style="font-size:40px;color:#fff"></i></a>
-                      </div>
-                    </div>
-                    <!--img src="assets/img/mentor.png" alt="img" class="img-fluid"-->
-
-                  </div>
-                </div>
-
-
-
-
-              </div>
-            </div>
-          </section>
+          <h2 class="poppin"><b>Our Offerings</b></h2>
+          <hr style="width:5%;border:2px solid #336791">
         </div>
-        <div class="row pt-5 pb-5">
-
-          <div class=" col-12 ml-sm-auto pr-sm-5 col-sm-8" data-aos="fade-right">
-            <h1 class="bold-heading  poppin"><b>Who fits best for this? </b></h1>
-            <hr style="width:5%;border:2px solid #336791">
+        <div class="row">
+          <div class="col-6" data-aos="fade-up" data-aos="fade-up">
+            <img src="assets/img/mentor_carousel.png" alt="" class="w-100">
+          </div>
+          <div class="col-6" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/capital.png" alt="" class="w-75">
 
           </div>
 
-          <div class="row">
-            <div class="col-12 col-sm-5 mt-4 mr-auto" data-aos="fade-left">
-              <img src="assets/img/who.png" alt="" width="300px">
-            </div>
-            <div class="col-12 col-sm-7 ml-auto mt-5 pl-5 pl-sm-0 " data-aos="fade-right">
-              <p class="font-weight-bold poppin" style="text-align:left">Early stage Founder who is spending sleepless
-                nights in building a world class product.
-                <br> If these are some of the challenges that is bothering you every day for instance – Unable to
-                identify the right cofounder <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px"
-                  aria-hidden="true"></i>
-                <br> Still struggling to get the PMF (product market fit) for your product !!
-                <br> You have a product and few customers but you don’t know how to scale <i class="fa fa-exclamation"
-                  style="color:#628aaa;font-size:22px" aria-hidden="true"></i> <i class="fa fa-exclamation"
-                  style="color:#628aaa;font-size:22px" aria-hidden="true"></i>
-                <br> You don’t know how to raise funds <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px"
-                  aria-hidden="true"></i>
-                <br> You are still clueless about forming a Board of Director and Board of Advisors who can spearhead
-                your organization <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px"
-                  aria-hidden="true"></i>
-                <br>
-                You might have just landed at the right place. </p>
-            </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-6" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/img/services.png" alt="" class="w-100">
+
+          </div>
+          <div class="col-6" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/img/services.png" alt="" class="w-100">
+
+          </div>
+
+
+        </div>
+        <div class="section-title text-center mt-sm-5 pt-sm-5">
+
+          <h1 class="bold-heading  poppin"><b>Who should apply? </b></h1>
+          <hr style="width:5%;border:2px solid #336791">
+
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-sm-6 mt-4 mr-auto" data-aos="fade-left">
+            <img src="assets/img/who1.png" alt="" class="apply_img">
+          </div>
+          <div class="col-12 col-sm-6 ml-auto mt-5 pl-5 pl-sm-0 " data-aos="fade-right">
+            <p class="font-weight-bold poppin" style="text-align:left">Early stage Founder who is spending sleepless
+              nights in building a world class product.
+              <br> If these are some of the challenges that is bothering you every day for instance – Unable to
+              identify the right cofounder <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px"
+                aria-hidden="true"></i>
+              <br> Still struggling to get the PMF (product market fit) for your product !!
+              <br> You have a product and few customers but you don’t know how to scale <i class="fa fa-exclamation"
+                style="color:#628aaa;font-size:22px" aria-hidden="true"></i> <i class="fa fa-exclamation"
+                style="color:#628aaa;font-size:22px" aria-hidden="true"></i>
+              <br> You don’t know how to raise funds <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px"
+                aria-hidden="true"></i>
+              <br> You are still clueless about forming a Board of Director and Board of Advisors who can spearhead
+              your organization <i class="fa fa-exclamation" style="color:#628aaa;font-size:22px"
+                aria-hidden="true"></i>
+              <br>
+              You might have just landed at the right place. </p>
           </div>
         </div>
-        <div class="row pt-5 pb-5" style="background-color: #eff2f5;">
-          <div class=" col-12 col-sm-6 pl-sm-5" data-aos="fade-left">
-            <h1 class="bold-heading poppin"><b>What we do ? </b></h1>
-            <hr style="width:5%;border:2px solid #336791">
+      </div>
 
-          </div>
-          <div class="col-12 col-sm-7 mt-5 pl-sm-5">
-            <p class="font-weight-bold poppin" style="text-align: left" data-aos="fade-left">We are not a StartUp
-              school. We are here to do and make things happen along with passionate founders. We provide customize one
-              on one support to each founder and chalk out a path to a successful enterprise. We will be deeply involved
-              in the operation of the business and will help the founder to take the moonshot. And when you are ready we
-              will be there to Invest in you. </p>
-          </div>
-        </div>
       </div>
 
       <!-- <div id="proposition" class="mt-3" data-aos="fade-up">
@@ -571,6 +473,406 @@
 
 
     <br>
+    <section id="team" class="mb-5 text-center" data-aos="fade-up">
+
+
+
+      <div class="spaces">
+        <div id="mentors">
+
+          <div class="section-title ">
+            <h2><b>Mentors </b>
+              <h2>
+                <hr style="width:5%;border:2px solid #336791">
+          </div>
+          <div class="container-fluid justify-content-center text-center investors ">
+            <div class="row wrapper">
+              <div class=" item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/ashish.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/ashishsharma101/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Ashish Sharma</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/balabiswanath.jpg" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/bala-vishwanath-77984a/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Bala Vishwanath</h4>
+                </div>
+              </div>
+
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/dev.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/dr-dev-k-dutta-5a45744/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Dr. Dev K. Dutta</h4>
+                </div>
+              </div>
+
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/divesh.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/dsisodraker/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Divesh Sisodraker</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/andreoli.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/jjandreoli/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Job Andreoli
+                  </h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/prinu.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/prinudickson/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Prinu Dickson</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/rahul.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/rahul-lahariya/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Rahul Lahariya</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/saurabh.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/saurabh-agrawal-023a71a/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Saurabh Agrawal</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/sharmishtha.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/sharmishtha-nath/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Sharmishtha Nath</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/sh.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/shekhar-jain-07b3a636/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Shekhar Jain</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/sumeet.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/sumeetgupta/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Sumeet Gupta
+                  </h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/sushma.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/sushma/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                  </ul>
+                  <h4>Sushma Rajagopalan</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/johndoe.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/vkapoor1/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a>
+                    </li>
+                  </ul>
+                  <h4>Vikram Kapoor
+                  </h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/didar.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/secretary-dr-a-didar-singh-bb666533/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+
+                  <h4>Dr. A Didar Singh
+                  </h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/ajith.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/ajithprasadb/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+
+                  <h4>Ajith Prasad Balakrishnan</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/amrita.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/amrita-asrani-71782727/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Amrita Asrani</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/anand.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/anand-kumar-tewari-28300011" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Anand Kumar</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/an.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/anuragdashputre/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+
+                  <h4>Anurag Dashputre</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/arnavchakravarty.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/arnab1/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                  </ul>
+                  <h4>Arnav Chakravarty
+                  </h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/johndoe.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Mr. Bikramjeet Kukreja</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/bharti.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/bhartimaan/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Bharti Mann</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+
+                <img src="assets/img/mentors/gautam.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/gautam-macker/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a>
+                    </li>
+                  </ul>
+                  <h4>Gautam Macker
+                  </h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/jaljit.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/jaijit/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                  </ul>
+                  <h4>Jaijit Bhattacharya
+                  </h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/kiran.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/kiranbhatia1/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a>
+                    </li>
+                  </ul>
+                  <h4>Kiran Bhatia Tandon</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/kumod.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href=" https://www.linkedin.com/in/kumod-kumar-jain-60101014/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Kumod Kumar Jain</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/mmh.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/mmh-beg-7ab3a87/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>MMH Beg</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/mohitsingh.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/mohitsinghleo/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Mohit Singh</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/muditgupta.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/mudit-gp" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+
+                  <h4>Mudit Gupta</h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/nileshdesai.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/nilesh-desai/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Nilesh Desai
+                  </h4>
+                </div>
+              </div>
+              <div class="item team-block bottom mx-3 mentor-img">
+                <img src="assets/img/mentors/niranjan.png" class="img-responsive" alt="img">
+                <div class="team-content">
+                  <ul class="list-unstyled">
+                    <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/niranjan-eye/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <h4>Niranjan Subbarao</h4>
+                </div>
+              </div>
+
+
+
+
+            </div>
+
+          </div>
+          <section id="get-started">
+            <div class="container mt-5 ">
+              <div class="row content-center">
+
+                <div class="col-12 col-md-6 col-lg-4 " data-aos="zoom-in" data-aos-delay="100">
+                  <div style="background-color:#336791;" class="feature-block">
+                    <div class="row">
+                      <div class="pl-0 pl-sm-5 col-9 pr-0 pt-2">
+                        <h3 class="poppin " style="font-size:20px;color:#fff;font-weight:bold;">Know our mentors</h3>
+                      </div>
+                      <div class="col-3 pl-0"> <a href="knowmentors.html"><i class="fa  fa-arrow-circle-right "
+                            aria-hidden="true" style="font-size:40px;color:#fff"></i></a>
+                      </div>
+                    </div>
+                    <!--img src="assets/img/mentor.png" alt="img" class="img-fluid"-->
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </section>
+
 
     <!-- <div class="container mt-5" data-aos="fade-up">
       <div class="section-title text-center">
@@ -732,8 +1034,8 @@
             <ul class="list-unstyled text-align-left">
               <li><a href="index.html#about-us">About us</a></li>
               <li><a href="index.html#team">Team</a></li>
-              <li><a href="focusarea.html">Focus Area</a></li>
-              <li><a href="privacypolicy.html">Privacy Policy</a></li>
+              <li><a href="focusarea.html"targrt="_blank">Focus Area</a></li>
+              <li><a href="privacypolicy.html"targrt="_blank">Privacy Policy</a></li>
 
             </ul>
 
@@ -746,10 +1048,13 @@
             <h4>Team</h4>
 
             <ul class="list-unstyled">
-              <li><a href="index.html#investing-team">Investing Team</a></li>
+              <li><a href="index.html#investing-team">Founder/Investing Team</a></li>
+              <li><a href="index.html#northamerican">NorthAmerican Team</a></li>
+
               <li><a href="index.html#advisary">Advisors</a></li>
               <li><a href="index.html#operating-team">Operating Team</a></li>
               <li><a href="index.html#eir-team">EIR's</a></li>
+              <li><a href="knowmentors.html"target="_blank">Mentors</a></li>
               <li><a href="index.html#ecosystem">Ecosystem</a></li>
             </ul>
 
@@ -764,7 +1069,8 @@
             <ul class="list-unstyled">
               <li><a href="focusarea.html#fintech-focusarea">Fintech</a></li>
               <li><a href="focusarea.html#agritech-focusarea">Agritech</a></li>
-              <li><a href="focusarea.html#mlai-focusarea">ML/AI</a></li>
+              <li><a href="focusarea.html#entermlai-focusarea">Enterprise(ML/AI)</a></li>
+              <li><a href="focusarea.html#socialmlai-focusarea">Social Impacts(ML/AI)</a></li>
             </ul>
 
           </div>
@@ -792,14 +1098,14 @@
         </div>
         <div class="row mt-3 ">
           <h4 class=" pl-lg-5 pr-3 text-white">Follow Us</h4>
-              <ul class="social-network social-circle ">
-               <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-               <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="#" class="icotwitter" title="twitter"><i class="fa fa-twitter"></i></a></li>
-               <li><a href="#" class="icoinstagram" title="instagram"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="#" class="icoangellist" title="angellist"><i class="fa fa-angellist"></i></a></li>
-    
-              </ul>
+          <ul class="social-network social-circle ">
+            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#" class="icotwitter" title="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" class="icoinstagram" title="instagram"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#" class="icoangellist" title="angellist"><i class="fa fa-angellist"></i></a></li>
+
+          </ul>
         </div>
 
       </div>
