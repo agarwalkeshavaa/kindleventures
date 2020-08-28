@@ -1515,7 +1515,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   width:20px;
   height:20px;
 }
-/* .proposition-list .image img {
+ .proposition-list .image img {
   position: absolute;
   top: 0;
   right: 0;
@@ -1574,13 +1574,18 @@ body.mobile-nav-active #mobile-nav-toggle i {
 .left-padding{
   padding-left: 100px;
 }
-
+.randomf{
+  font-size: 22px;;
+}
 @media (max-width: 768px) {
   .bold-heading{
     font-size:40px;
   }
   .feature-block-btn{
-    width:200px;
+    width:250px;
+}
+.randomf{
+  font-size: 15px;;
 }
 .left-padding{
   padding-left: 0px;
@@ -1588,7 +1593,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 #overview-img {
 height:200px;
-width:300px;  }
+width:200px;  }
 .proposition-list .list-heading {
   font-size:12px;
 }

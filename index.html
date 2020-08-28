@@ -49,7 +49,22 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   }
-  
+  .paddle {
+  position: absolute;
+  top: 4650px;
+  bottom: 0;
+  width: 30px;
+  height: 20px;
+  background-color:red;
+}
+
+.lefty {
+  left: 0;
+}
+
+.righty {
+  right: 0;
+}
   .wrapper::-webkit-scrollbar {
     display: none;
   }
@@ -72,7 +87,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header mr-5 pr-2 ">
+  <header id="header" class="header  pr-5 ">
     <div class="container">
 
       <div id="logo" class="pull-left">
@@ -94,7 +109,7 @@
 
               <li><a href="#advisary">Advisors</a></li>
               <li><a href="#operating-team">Operating Team</a></li>
-              <li><a href="#eir-team">EIR's</a></li>
+              <li><a href="#eir-team">Co-founder EIR/ Kindle Incubator</a></li>
               <li><a href="#mentors">Mentors</a></li>
             </ul>
           </li>
@@ -424,7 +439,7 @@
         justify-content: center; 
         align-items: center; " data-aos="zoom-in" data-aos-delay="200">
               <div class="team-block bottom">
-                <img src="assets/img/rahulkamath.png" class="img-responsive" alt="img">
+                <img src="assets/img/mentors/samba.png" class="img-responsive" alt="img">
                 <div class="team-content">
                   <ul class="list-unstyled">
                     <!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
@@ -1108,33 +1123,19 @@
 
 
           </div>
-          
+       
         </div>
-        <section id="get-started">
-          <div class="container mt-5 ">
-            <div class="row content-center">
-
-              <div class="col-12 col-md-6 col-lg-4 " data-aos="zoom-in" data-aos-delay="100">
-                <div style="background-color:#336791;" class="feature-block">
-                  <div class="row">
-                    <div class="pl-0 pl-sm-5 col-9 pr-0 pt-2">
-                      <h3 class="poppin " style="font-size:20px;color:#fff;font-weight:bold;">Know our mentors</h3>
-                    </div>
-                    <div class="col-3 pl-0"> <a href="knowmentors.html"><i class="fa  fa-arrow-circle-right "
-                          aria-hidden="true" style="font-size:40px;color:#fff"></i></a>
-                    </div>
-                  </div>
-                  <!--img src="assets/img/mentor.png" alt="img" class="img-fluid"-->
-
-                </div>
-              </div>
-
-
-
-
+        <div class="container-fluid">
+          <div class="row mt-5 justify-content-center">
+            <div class="col-auto pl-auto  ">
+              <i class="fa left-button fa-arrow-circle-left "aria-hidden="true" style="font-size:50px;cursor: pointer;color:#336791"></i>
             </div>
+            <div class="col-auto pl-0">
+            <i class="fa right-button fa-arrow-circle-right "aria-hidden="true" style="font-size:50px;cursor: pointer;color:#336791"></i>
           </div>
-        </section>
+          </div>
+        </div>
+     
       </div>
     </div>
 
@@ -1240,8 +1241,8 @@
             <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
               <div class="feature-block">
 
-                <img src="assets/img/svg/mlai.png" alt="img" class="img-fluid">
-                <h3>Enterprise<span style="font-size:10px"><b>(ML/AI)</b></span></h3>
+                <img src="assets/img/enterprise.png" alt="img" class="img-fluid">
+                <h3>Enterprise ML/AI</h3>
                 <a href="focusarea.html#entermlai-focusarea">read more</a>
 
               </div>
@@ -1415,7 +1416,9 @@
       <div class="section-title text-center">
         <h2><b>Contact</b></h2>
         <hr style="width:5%;border:2px solid #336791">
-        <div class="container" data-aos="fade-up">
+        <div class="container mb-4" data-aos="fade-up">
+          <h3>USA Address</h3>
+          <hr  style="width:35%">
           <div class="row justify-content-center pt-5" data-aos="fade-up" data-aos-delay="100">
 
 
@@ -1423,7 +1426,9 @@
 
             <div class="col-lg-3 col-md-4">
               <i class="fa fa-map-marker contact-us"></i>
-              <p>515, EROS CITY SQUARE, ROSEWOOD CITY, SECTOR 49-50, GURGAON GURGAON Gurgaon HR IN 122001.</p>
+              <p>24 Arsenal Street, Watertown,
+                 MA 02472515</p>
+
             </div>
 
             <div class="col-lg-3 col-md-4 email  ">
@@ -1433,7 +1438,36 @@
 
             <div class="col-lg-3 col-md-4">
               <i class="fa fa-phone fa-lg contact-us"></i>
-              <p>+1 650 387 0614</p>
+              <p class="mt-0">+1 650 387 0614</p>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="container" data-aos="fade-up">
+          <h3>India Address</h3>
+          <hr  style="width:35%">
+          <div class="row justify-content-center pt-5" data-aos="fade-up" data-aos-delay="100">
+
+
+
+
+            <div class="col-lg-3 col-md-4">
+              <i class="fa fa-map-marker contact-us"></i>
+              
+              <p>515, Eros City Square, Rosewood City, Sector 49-50, Gurgaon Hr IN 122001.</p>
+
+            </div>
+
+            <div class="col-lg-3 col-md-4 email  ">
+              <i class="fa fa-envelope fa-lg contact-us"></i>
+              <p>info@kentrus.com</p>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+              <i class="fa fa-phone fa-lg contact-us"></i>
+              <p class="mb-0">+91 991 080 3731</p>
             </div>
 
 
@@ -1490,7 +1524,7 @@
 
               <li><a href="#advisary">Advisors</a></li>
               <li><a href="#operating-team">Operating Team</a></li>
-              <li><a href="#eir-team">EIR's</a></li>
+              <li><a href="#eir-team">Co-founder EIR/ Kindle Incubator</a></li>
               <li><a href="knowmentors.html" target="_blank">Mentors</a></li>
              
               <li><a href="#ecosystem">Ecosystem</a></li>
@@ -1571,6 +1605,8 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -1582,7 +1618,20 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+    $('.right-button').click(function() {
+  event.preventDefault();
+  $('.wrapper').animate({
+    scrollLeft: "+=200px"
+  }, "slow");
+});
+$('.left-button').click(function() {
+  event.preventDefault();
+  $('.wrapper').animate({
+    scrollLeft: "-=200px"
+  }, "slow");
+});
+  </script>
 </body>
 
 </html>
